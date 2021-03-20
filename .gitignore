@@ -1,0 +1,21 @@
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+terraform.tfvars
+
+*.tfstate
+*.backup
+*.tfvars
+*.json
+*.txt
+
+
+google_ip_forwading/.terraform/
+google-lockdown-ubuntu-18/.terraform/
+preemptible-instance/.terraform/
+
+google_ip_forwading/backend.tf
+google-lockdown-ubuntu-18/backend.tf
+preemptible-instance/backend.tf
+
+# use git rm --cached file.name to ignore commited file
