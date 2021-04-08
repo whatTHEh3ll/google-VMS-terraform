@@ -47,13 +47,28 @@ terraform {
   }
 }
 ```
-regular terrform commands
+##### regular terrform commands
 ```
+terraform console
+terraform fmt
 terraform init
 terraform init -reconfigure
+terraform plan 
+
+# formats plan to no color removes funny characters
+terraform plan -no-color > tfplan.txt
+
 terraform validate
 terraform apply -auto-approve
 terraform destroy -auto-approve
+
+# output to formated json (jq needs to be installed) run after apply
+terraform show -json | jq . > state.json
+
+# target a specific terraform resource
+terraform plan -target resource.name 
+terraform apply -auto-approve
+
 ```
 
 ##### example terraform.tfvars place in folder with main.tf
